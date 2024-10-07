@@ -14,7 +14,6 @@ const EVENT_QUERY = defineQuery(`*[
     slug.current == $slug
   ][0]{
   ...,
-  "eventType": coalesce(format, eventType),
   "date": coalesce(date, now()),
   "doorsOpen": coalesce(doorsOpen, 0),
   headline->,
